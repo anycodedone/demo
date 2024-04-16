@@ -8,4 +8,3 @@ jobs:
       - ms-teams-notifier/report:
           only_on_fail: false
           webhook_url: $MS_TEAMS_WEBHOOK_URL
-workflows: null
