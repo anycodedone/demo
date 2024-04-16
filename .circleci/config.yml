@@ -7,11 +7,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
-      # Replace this with a real test runner invocation
-      - run:
-          name: Run tests
-          command: echo 'replace me with real tests!' && false
       - ms-teams-notifier/report:
           only_on_fail: false
           webhook_url: $MS_TEAMS_WEBHOOK_URL
