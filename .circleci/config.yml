@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ms-teams-notifier: oktapodia/ms-teams-notifier@1.0.3
+  ms-teams-notifier: opub/ms-teams-orb@1.0.3
 jobs:
   test:
     docker:
@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Run tests
           command: echo "$MS_TEAMS_WEBHOOK_URL"
-      - ms-teams-notifier/report:
+      - ms-teams-orb/report:
           only_on_fail: false
           webhook_url: $MS_TEAMS_WEBHOOK_URL
   build:
