@@ -5,9 +5,7 @@ jobs:
   build:
     executor: docker
     steps:
-      - checkout
-      - run: command/to/run/your/tests
       - ms-teams-notifier/report:
-          only_on_fail: true
+          only_on_fail: false
           webhook_url: $MS_TEAMS_WEBHOOK_URL
 workflows: null
