@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ms-teams-notifier: oktapodia/ms-teams-notifier@1.0.0
+  ms-teams-notifier: oktapodia/ms-teams-notifier@1.0.3
 jobs:
   test:
     docker:
