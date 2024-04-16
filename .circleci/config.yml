@@ -25,9 +25,6 @@ jobs:
           command: touch example.txt
       - store_artifacts:
           path: example.txt
-      - ms-teams-notifier/report:
-          only_on_fail: false
-          webhook_url: $MS_TEAMS_WEBHOOK_URL
 workflows:
   example:
     jobs:
