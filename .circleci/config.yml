@@ -10,10 +10,10 @@ jobs:
       # Replace this with a real test runner invocation
       - run:
           name: Run tests
-          command: echo $MS_TEAMS_WEBHOOK_URL
+          command: echo $TEAMS
       - ms-teams-orb/report:
           only_on_fail: false
-          webhook_url: $TEAMS_WEBHOOK_URL
+          webhook_url: $TEAMS
   build:
     docker:
       - image: cimg/base:stable
