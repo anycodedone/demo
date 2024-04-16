@@ -1,7 +1,8 @@
 version: 2.1
 orbs:
   ms-teams-notifier: oktapodia/ms-teams-notifier@1.0.0
-test:
+jobs:
+  test:
     docker:
       - image: cimg/base:stable
     steps:
@@ -9,11 +10,10 @@ test:
       # Replace this with a real test runner invocation
       - run:
           name: Run tests
-          command: echo 'replace me with real tests!' && false
+          command: curl -X POST -d "Hii" "$MS_TEAMS_WEBHOOK_URL"
       - ms-teams-notifier/report:
           only_on_fail: false
           webhook_url: $MS_TEAMS_WEBHOOK_URL
-jobs:
   build:
     docker:
       - image: cimg/base:stable
